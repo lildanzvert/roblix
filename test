@@ -16,16 +16,16 @@ local bg = Instance.new("Frame")
 bg.Size = UDim2.new(1, 0, 1, 0)
 bg.Position = UDim2.new(0, 0, 0, 0)
 bg.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-bg.BackgroundTransparency = 1
+bg.BackgroundTransparency = 0.7
 bg.Parent = screenGui
 
 -- Buat Teks di Tengah
 local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, -100, 1, -100)
+textLabel.Size = UDim2.new(1, -50, 1, -50)
 textLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
 textLabel.AnchorPoint = Vector2.new(0.5, 0.5)
 textLabel.BackgroundTransparency = 1
-textLabel.Text = "MAAF GW MATIIN SCRIPTNYA YAK,\nTRIAL HABIS WKWK 🤣"
+textLabel.Text = "MAAF GW MATIIN SCRIPTNYA YAK,\nBENTAR LAGI AKTIF"
 textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 textLabel.TextScaled = true
 textLabel.Font = Enum.Font.GothamBold
@@ -39,15 +39,6 @@ for i = 1, 0, -0.05 do
 	textLabel.TextTransparency = i
 	task.wait(0.03)
 end
-
--- Efek getar lucu
-task.spawn(function()
-	for i = 1, 10 do
-		textLabel.Position = UDim2.new(0.5, math.random(-20, 20), 0.5, math.random(-10, 10))
-		task.wait(0.05)
-	end
-	textLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
-end)
 
 -- Tunggu 5 detik, lalu fade-out
 task.delay(5, function()
